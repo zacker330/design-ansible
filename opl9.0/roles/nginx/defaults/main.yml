@@ -1,0 +1,4 @@
+---
+nginx_package_tmp_dir: "/tmp"
+apps_port: 9000
+# 其它变量，此处省略

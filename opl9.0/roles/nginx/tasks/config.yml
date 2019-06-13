@@ -1,0 +1,7 @@
+---
+- name: ensure nginx config
+  template:
+    src: "nginx.conf"
+    dest: "/usr/local/nginx/conf"
+  notify:
+    - restart nginx

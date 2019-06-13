@@ -1,0 +1,9 @@
+---
+- hosts: "nginx"
+  ## playbook 级别变量
+  vars:
+    apps_port: 9090
+  roles:
+    - firewalld
+    ## roles 级别变量
+    - { role: nginx, apps_port: 9091 }

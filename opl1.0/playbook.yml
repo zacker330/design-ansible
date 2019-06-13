@@ -1,0 +1,9 @@
+---
+- hosts: "192.168.35.10"
+  ansible_ssh_user: vagrant
+  ansible_ssh_pass: vagrant
+  tasks:
+    - name: install nginx
+      yum:
+        name: nginx
+        action: install

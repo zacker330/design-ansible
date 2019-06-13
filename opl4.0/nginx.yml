@@ -1,0 +1,5 @@
+---
+- name: Ensure nginx exists
+  yum:
+    name: nginx
+    state: present

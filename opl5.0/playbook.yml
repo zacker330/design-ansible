@@ -1,0 +1,9 @@
+---
+- hosts: "nginx"
+  ansible_ssh_user: vagrant
+  ansible_ssh_pass: vagrant
+  tasks:
+    - name: config firewalld
+      include_tasks: firewalld.yml
+    - name: install and config nginx
+      include_tasks: nginx.yml

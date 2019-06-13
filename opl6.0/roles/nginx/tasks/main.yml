@@ -1,0 +1,13 @@
+---
+- name: Ensure nginx exists
+  yum:
+    name: nginx
+    state: present
+
+- name: "ensure nginx package exists"
+  copy: 
+    src: "nginx.tar.gz"
+    dest: "{{nginx_package_tmp_dir}}"
+
+- name: "Config nginx"
+  includes_tasks: config.yml

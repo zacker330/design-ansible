@@ -1,0 +1,5 @@
+---
+- name: Ensure firewalld started
+  service:
+    name: firewalld
+    state: started

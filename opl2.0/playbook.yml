@@ -1,0 +1,9 @@
+---
+- hosts: "192.168.35.10"
+  ansible_ssh_user: vagrant
+  ansible_ssh_pass: vagrant
+  tasks:
+    - name: Ensure nginx exists
+      yum:
+        name: nginx
+        state: present
