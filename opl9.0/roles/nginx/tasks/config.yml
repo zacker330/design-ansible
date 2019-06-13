@@ -3,5 +3,10 @@
   template:
     src: "nginx.conf"
     dest: "/usr/local/nginx/conf"
-  notify:
-    - restart nginx
+  register: nginx_config_result
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+  when: nginx_config_result.changed
